@@ -93,3 +93,15 @@ var game = {
     }
 
     },
+    answeredCorrectly: function(){
+        console.log("right!")
+        clearInterval(timer);
+        game.correct++;
+        $('#subwrapper').html('<h2> CORRECT!</h2>');
+        if(game.currentQuestion==questions.length-1){
+            setTimeout(game.results,2*1000);
+        } else{
+            setTimeout(game.nextQuestion,2*1000);
+        }
+
+    },
