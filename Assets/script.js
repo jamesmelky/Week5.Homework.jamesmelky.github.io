@@ -118,3 +118,20 @@ var game = {
         }
 
     },
+    // remove the start button when clicked
+$('#start').on('click', function(){
+    $('#start').remove();
+  game.loadQuestion();
+
+})
+    reset: function(){
+        game.currentQuestion = 0;
+        game.counter = 0;
+        game.correct = 0;
+        game.incorrect = 0;
+        game.unanswered = 0;
+        game.loadQuestion();
+
+    }
+
+}
