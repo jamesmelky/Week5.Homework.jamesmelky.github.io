@@ -8,4 +8,4 @@ I have adjusted some styling components to make the application easy to read.
 Application URL:  https://jamesmelky.github.io/Week5.Homework.jamesmelky.github.io/
 
 Screenshot of application:
-![Screenshot of Application](/assets/images/screenshot.jpg?raw=true "Screenshot of Application")
+![Screenshot of Application](/Assets/images/screenshot.jpg?raw=true "Screenshot of Application")
