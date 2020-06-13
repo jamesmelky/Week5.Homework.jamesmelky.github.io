@@ -22,55 +22,16 @@ var questions = [{
     answers: ["Strings", "Booleans", "Alerts","Numbers"],
     correctAnswer: "Alerts",
 }, {
-    question: "HTML stands for which?",
+    question: "HTML is an acronym for which answer?",
     answers: ["HyperText Markup Language", "HypoText Markdown Language", "HydraText Markup Language", "HyperText Markdown Lanugage"],
     correctAnswer: "HyperText Markup Language",
 }, {
-question: "What is the state bird?",
-    answers: ["Bald Eagle", "Blue Jay", "Cardinal", "Wild Turkey"],
-    correctAnswer: "Cardinal",
+question: "Arrays in JavaScript can be used to store _____?",
+    answers: ["Numbers and strings", "Booleans", "Other arrays", "All of the above"],
+    correctAnswer: "All of the above",
 \},
 
 ];
-
-// remove the start button when clicked
-$('#start').on('click', function(){
-    $('#start').remove();
-  game.loadQuestion();
-
-})
-
-// click event when you click the answer
-
-$(document).on('click','.answer-button',function(e){
-    game.clicked(e);
-})
-
-$(document).on('click','#reset',function(){
-    game.reset();
-})
-
-// Variable for questions, an array of objects 
-
-var questions = [{
-    question: "Commonly used data types DO NOT include:",
-    answers: ["Strings", "Booleans", "Alerts","Numbers"],
-    correctAnswer: "Alerts",
-    image: "assets/images/imagename"
-}, {
-    question: "North Carolina grows the most what in the nation?",
-    answers: ["Tomatoes", "Sweet Potatoes", "Broccoli", "Soybeans"],
-    correctAnswer: "Sweet Potatoes",
-    image: "assets/images/imagename",
-}, {
-question: "What is the state bird?",
-    answers: ["Bald Eagle", "Blue Jay", "Cardinal", "Wild Turkey"],
-    correctAnswer: "Cardinal",
-    image: "assets/images/imagename",
-},
-
-];
-
 
 var game = {
     questions:questions,
@@ -80,4 +41,11 @@ var game = {
     incorrect:0,
     unanswered:0,
     
- 
+    countdown: function(){
+        game.counter --;
+        $('#counter').html(game.counter); 
+        if(game.counter<=0){
+            console.log("TIME UP!")
+            game.timeUp();
+        }
+    },
