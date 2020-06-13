@@ -84,3 +84,12 @@ var game = {
         $('#subwrapper').append("<button id= reset>Try again?</button>")
 
     },
+    clicked: function(e){
+        clearInterval(timer);
+        if($(e.target).data("name")==questions[game.currentQuestion].correctAnswer){
+            game.answeredCorrectly();
+    } else {
+        game.answeredIncorrectly();
+    }
+
+    },
