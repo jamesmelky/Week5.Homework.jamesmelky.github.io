@@ -75,3 +75,12 @@ var game = {
             setTimeout(game.nextQuestion,3*1000);
         }
     },
+    results: function(){
+        clearInterval(timer);
+        $('#subwrapper').html('<h2>Complete!</h2>')
+        $('#subwrapper').append(" Correct: " +game.correct + '<br/>');
+        $('#subwrapper').append(" Incorrect: " +game.incorrect + '<br/>');
+        $('#subwrapper').append(" Unanswered: " +game.unanswered + '<br/>');
+        $('#subwrapper').append("<button id= reset>Try again?</button>")
+
+    },
