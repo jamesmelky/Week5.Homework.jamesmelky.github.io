@@ -105,3 +105,16 @@ var game = {
         }
 
     },
+    answeredIncorrectly: function(){
+        console.log("wrong")
+        clearInterval(timer);
+        game.incorrect++;
+        $('#subwrapper').html('<h2> Wrong!</h2>');
+        $('#subwrapper').append('<h3>The correct answer was: '+questions[game.currentQuestion].correctAnswer+'</h3>');
+        if(game.currentQuestion==questions.length-1){
+            setTimeout(game.results,2*1000);
+        } else{
+            setTimeout(game.nextQuestion,2*1000);
+        }
+
+    },
